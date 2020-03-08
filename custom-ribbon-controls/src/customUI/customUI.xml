@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="customUI_onLoad">
+    <ribbon>
+        <tabs>
+            <tab id="tab1" label="Custom Tab 1">
+                <group id="group1" label="Group 1">
+                    <button id="button1" label="Button 1" image="customImage1" size="large" onAction="button1_onAction" description="Button Description 1" />
+                    <toggleButton id="toggleButton1" size="normal" imageMso="Help" label="Toggle Button 1" getPressed="toggleButton1_getPressed" onAction="toggleButton1_onAction" /> 
+                    <button id="button2" getLabel="button2_getLabel" image="customImage2" getSize="button2_getSize" getEnabled="button2_getEnabled" description="Button Description 2" />
+                </group>
+                <group id="group2" label="Group 2">
+                    <checkBox id="checkBox1" label="Checkbox 1" onAction="checkBox1_onAction" /> 
+                    <checkBox id="checkBox2" label="Checkbox 2" getPressed="checkBox2_getPressed" /> 
+                    <editBox id="editBox1" label="Edit box 1" maxLength="20" getText="editBox1_getText" onChange="editBox1_onChange" /> 
+                </group>
+                <group id="group3" label="Group 3">
+                    <menu id="menu1" label="Normal checkboxes"> 
+                        <checkBox id="mnuchk1" label="Menu checkbox 1"/> 
+                        <menuSeparator id="mnusep1" title="Check Boxes"/> 
+                        <checkBox id="mnuchk2" label="Menu checkbox 2"/> 
+                    </menu>
+                    <menu id="menu2" label="Large checkboxes" itemSize="large"> 
+                        <checkBox id="mnuchk3" label="Menu checkbox 3"/> 
+                        <menuSeparator id="mnusep2" title="Check Boxes"/> 
+                        <checkBox id="mnuchk4" label="Menu checkbox 4"/> 
+                        <checkBox id="mnuchk5" label="Menu checkbox 5"/> 
+                        <menuSeparator id="mnusep3" /> 
+                        <checkBox id="mnuchk6" label="Menu checkbox 6"/> 
+                        <checkBox id="mnuchk7" label="Menu checkbox 7"/> 
+                    </menu> 
+                </group>
+            </tab>
+            <tab id="tab2" label="Custom Tab 2">
+                <group id="group4" label="Group 4">
+                    <comboBox id="comboBox1" label="Static combo box" >
+                        <item id="cboItem1" label="Item 1"/> 
+                        <item id="cboItem2" label="Item 2"/> 
+                        <item id="cboItem3" label="Item 3"/> 
+                    </comboBox> 
+                    <dropDown id="dropDown1" label="Static dropdown" >
+                        <item id="ddItem1" label="Item 1" imageMso="HappyFace"/> 
+                        <item id="ddItem2" label="Item 2" imageMso="Info"/> 
+                    </dropDown> 
+                    <comboBox id="comboBox2" label="Dynamic combo box" getItemCount="comboBox2_getItemCount" getItemLabel="comboBox2_getItemLabel" getText="comboBox2_getText" onChange="comboBox2_onChange" >
+                    </comboBox> 
+                    <dropDown id="dropDown2" label="Dynamic dropdown" getItemCount="dropDown2_getItemCount" getItemLabel="dropDown2_getItemLabel" getSelectedItemIndex="dropDown2_getSelectedItemIndex" onAction="dropDown2_onAction" getItemImage="dropDown2_getItemImage" >
+                    </dropDown> 
+                </group>
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>
