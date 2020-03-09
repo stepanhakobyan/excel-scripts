@@ -6,7 +6,14 @@
                 <group id="group1" label="Group 1">
                     <button id="button1" label="Button 1" image="customImage1" size="large" onAction="button1_onAction" description="Button Description 1" />
                     <toggleButton id="toggleButton1" size="normal" imageMso="Help" label="Toggle Button 1" getPressed="toggleButton1_getPressed" onAction="toggleButton1_onAction" /> 
-                    <button id="button2" getLabel="button2_getLabel" image="customImage2" getSize="button2_getSize" getEnabled="button2_getEnabled" description="Button Description 2" />
+                    <splitButton id="splitButton1" size="large" >
+                        <button id="buttonS1" label="Split Button" imageMso="AnimationAddGallery" />
+                        <menu id="menuS1" label="Normal buttons" itemSize="large"> 
+                            <button id="buttonS4" label="Button S4" imageMso="AnimationCustomAddEmphasisDialog" />
+                            <button id="buttonS5" label="Button S5" imageMso="AnimationCustomAddEntranceDialog" />
+                            <button id="buttonS6" label="Button S6" imageMso="AnimationCustomAddExitDialog" />
+                        </menu>
+                    </splitButton>
                 </group>
                 <group id="group2" label="Group 2">
                     <checkBox id="checkBox1" label="Checkbox 1" onAction="checkBox1_onAction" /> 
@@ -28,6 +35,9 @@
                         <checkBox id="mnuchk6" label="Menu checkbox 6"/> 
                         <checkBox id="mnuchk7" label="Menu checkbox 7"/> 
                     </menu> 
+                </group>
+                <group id="group5" label="Group 5">
+                    <button id="button2" getLabel="button2_getLabel" image="customImage2" getSize="button2_getSize" getEnabled="button2_getEnabled" description="Button Description 2" />
                 </group>
             </tab>
             <tab id="tab2" label="Custom Tab 2">
